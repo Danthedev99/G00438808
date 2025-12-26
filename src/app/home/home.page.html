@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <div style="display:flex; flex-wrap: no wrap; justify-content: space-between;"><span>G00438808</span>
+      <i class = "fa fa-heart"></i>
+      <i class = "fa fa-gear"></i>
+      <i class="fa fa-arrows-rotate"></i>
+      </div>
+ <!-- https://www.w3schools.com/cssref/css3_pr_justify-content.php -->
+   <!-- https://www.w3schools.com/cssref/css3_pr_flex-wrap.php -->
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div style= "display: flex; gap: 20px;">
+  <button onclick ="location.href='/ingredients_entry'"> Enter Ingredients</button>
+  <button onclick = "location.href='/ingredients'">  Ingredients</button>
+  <!-- https://www.w3schools.com/csS/css3_buttons.asp -->
   </div>
 </ion-content>
