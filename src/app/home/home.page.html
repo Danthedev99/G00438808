@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <div style="display:flex; flex-wrap: no wrap; justify-content: space-between;"><span>G00438808</span>
+      <div style="display:flex; flex-wrap: no wrap; gap: 20px;"><span>G00438808</span>
       <i class = "fa fa-heart"></i>
       <i class = "fa fa-gear"></i>
       <i class="fa fa-arrows-rotate"></i>
@@ -13,9 +13,49 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<div style= "display: flex; gap: 20px;">
-  <button onclick ="location.href='/ingredients_entry'"> Enter Ingredients</button>
-  <button onclick = "location.href='/ingredients'">  Ingredients</button>
-  <!-- https://www.w3schools.com/csS/css3_buttons.asp -->
-  </div>
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  text-align: center;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.topnav a.active {
+}
+
+.topnav input[type=text] {
+  float: right;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+   margin: 0px;
+  }
+}
+</style>
+
+<div class="topnav">
+  <a class="Enter Ingredients">Enter Ingredients</a>
+  <input type="text" placeholder="Ingredients">
+</div>
 </ion-content>
+  <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3 -->
+
