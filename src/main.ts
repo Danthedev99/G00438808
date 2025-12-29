@@ -6,12 +6,19 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { importProvidersFrom } from '@angular/core';
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import {Drivers} from '@ionic/storage';
+
 
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    importProvidersFrom(IonicStorageModule.forRoot({ name: "APIdatabase" }))
-  ],
+    importProvidersFrom(IonicStorageModule.forRoot({ name: "APIdatabase" ,
+      driverOrder: [Drivers.IndexedDB]
+    })
+
+  ),
+
+]
 });
