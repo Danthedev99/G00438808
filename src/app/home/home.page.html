@@ -48,19 +48,14 @@ body {
 }
 </style>
 
-<div class="topnav">
-  <a class="Enter Ingredients">Enter Ingredients</a>
-  <input type="text" placeholder="Ingredients">
-</div>
+<ion-content [fullscreen]="true">
+  <ion-input lable="Enter Ingredient" placeholder="Ingredient" [(ngModel)]="keyword"></ion-input>
+  <ion-button (click) ="Search()">
+    Search
+  </ion-button>
+  </ion-content>
 
-<div id="container">
-<ion-button (click)="setValue()">Set Value </ion-button>
-<ion-button (click)="getValue()">Get Value </ion-button>
-<ion-button (click)="removeValue()">Remove Value </ion-button>
-<ion-button (click)="clearStorage()">Clear Storage </ion-button>
-  <!--Search </ion-button> -->
-  <div>{{value}}</div>
-</div>
+
 
 </ion-content>
   <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3 -->

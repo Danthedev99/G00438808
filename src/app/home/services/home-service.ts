@@ -18,17 +18,17 @@ async init(){
 }
 
 async set(key:string, value:any){
- let result =await this._storage?.set(key, value);
- console.log(result)
+ await this._storage?.set(key, value);
 }
 
 public async get(key:string){
- let value = await this._storage?.get(key);
- console.log(value)
- return value
+ await this._storage?.get(key);
   //return await this.storage.get(key)
 }
-  public async remove(key: string){
+
+
+  /*
+public async remove(key: string){
   let value= await this._storage?.remove(key);
   }
 
@@ -40,6 +40,6 @@ public async get(key:string){
    let value= await this._storage?.keys();
 
    return value
-  }
+  */
 
 }
