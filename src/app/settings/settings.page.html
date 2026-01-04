@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large">Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-radio-group aria-owns="rad1 rad2">
+
+        <ion-label><h1>Display Recipe Measurements in: </h1></ion-label>
+
+    <ion-list>
+       <ion-item>
+          <ion-label>Metric</ion-label>
+          <ion-radio id="rad1" value="Metric" (click)="MetricValueTrue()" ></ion-radio>
+       </ion-item>
+       <ion-item>
+          <ion-label>US</ion-label>
+          <ion-radio id="rad2" value="US" (click)="MetricValueFalse()" ></ion-radio>
+       </ion-item>
+
+</ion-list>
+<!-- Used the document reference for the radio display for measurements
+ https://ionic.io/docs/accessibility/ion-radio-group-->
+

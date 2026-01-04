@@ -17,14 +17,25 @@ export class HomePage {
   returnedData: any;
   keyword: string = "";
 
-  constructor(private Router: Router, private HomeService: HomeService) {}
+  constructor(private router: Router, private HomeService: HomeService) {}
 
 
 
 async Search(){
-console.log("Keyword saved:", this.keyword);
-  await this.HomeService.set("keyword", this.keyword);
-   this.Router.navigate(['/Recipes']);
- }
+console.log("kw", this.keyword);
+  await this.HomeService.set("kw", this.keyword);
+   this.router.navigate(['/Recipes']);
+ //Search keyword in homeservice
+  }
+
+  //page navigation to separate pages on button press
+async NavSettings(){
+  this.router.navigate(['./settings']);
+}
+
+async NavFavourites(){
+  this.router.navigate(['./favourites']);
+}
+
 
 }

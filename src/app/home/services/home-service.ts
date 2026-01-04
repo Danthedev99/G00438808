@@ -11,19 +11,23 @@ export class HomeService {
   private _storage : Storage | null = null;
 
 async init(){
-  if(!this._storage){
- const storage = await this.storage.create();
-  this._storage = storage;
-  }
+  //if(!this._storage){
+ //const storage =
+  await this.storage.create();
+ // this._storage = storage;
+ //create local storage
+  //}
 }
 
 async set(key:string, value:any){
- await this._storage?.set(key, value);
+ await this.storage.set(key, value);
+ //set method for key
 }
 
 public async get(key:string){
- await this._storage?.get(key);
-  //return await this.storage.get(key)
+ //await this._storage?.get(key);
+  return await this.storage.get(key)
+  //Get method for key
 }
 
 

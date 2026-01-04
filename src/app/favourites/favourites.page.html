@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Favourites</ion-title>
+  </ion-toolbar>
+<style>
+.recipe-card img {
+  width: 15%;        /* make the image fit the card width */
+  height: auto;       /* maintain aspect ratio */
+  object-fit: cover;  /* crop if needed, but nicely */
+  max-height: 50px;  /* optional: prevent very tall images */
+  border-radius: 8px; /* optional: match card styling */
+}
+</style>
+   <ion-card *ngFor = "let Recipe of Favourites">
+    <ion-card-content><img *ngIf="Recipe.image" [src]="Recipe.image" alt="Recipe Image"/>
+      <!--Image display set as standard for each image and each one gets its one card as ngfor is called when cosntructor is-->
+  </ion-card-content>
+  <ion-card-content>
+    {{ Recipe.name }}
+  <ion-button>{{Recipe.name}}</ion-button>
+  </ion-card-content>
+</ion-card>

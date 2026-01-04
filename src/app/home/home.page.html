@@ -2,12 +2,13 @@
   <ion-toolbar>
     <ion-title>
       <div style="display:flex; flex-wrap: no wrap; gap: 20px;"><span>G00438808</span>
-      <i class = "fa fa-heart"></i>
-      <i class = "fa fa-gear"></i>
+      <ion-button fill="clear" (click)="NavFavourites()"><i class = "fa fa-heart"></i></ion-button>
+      <ion-button fill="clear" (click)="NavSettings()"><i class = "fa fa-gear" fill="clear"></i></ion-button>
       <i class="fa fa-arrows-rotate"></i>
       </div>
- <!-- https://www.w3schools.com/cssref/css3_pr_justify-content.php -->
-   <!-- https://www.w3schools.com/cssref/css3_pr_flex-wrap.php -->
+ <!-- Display for the homepage here in css and the flex in these two links
+        https://www.w3schools.com/cssref/css3_pr_justify-content.php -->
+<!--https://www.w3schools.com/cssref/css3_pr_flex-wrap.php -->
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -36,6 +37,7 @@ body {
 .topnav input[type=text] {
   outline: none;
   border: none;
+  /*Used the CSS display for the homepage make up from w3schools template*/
   /*https://www.w3schools.com/css/css_outline.asp*/
   font-size: 17px;
   padding: 10px;
@@ -58,6 +60,6 @@ body {
 
 
 </ion-content>
-  <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3 -->
-  <!-- https://ionicframework.com/docs/api/button -->
+  <!-- Searchbar outline used with code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3 -->
+  <!-- Ionic GUI button framework used from here https://ionicframework.com/docs/api/button -->
 

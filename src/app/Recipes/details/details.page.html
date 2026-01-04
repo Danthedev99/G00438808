@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ingredients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <ion-card *ngFor = "let ingredient of ingredients">
+    <ion-card-content><img *ngIf="ingredient.image" [src]="ingredient.image" alt="Recipe Image" />
+      <!--Display the ingredients each in a card with an image from the id and the templated display standardised for the images-->
+  </ion-card-content>
+  <ion-card-content>
+    {{ ingredient.name }} {{ ingredient.amount }}
+  </ion-card-content>
+</ion-card>
+
+     <ion-card>
+     <ion-card-content>
+     <h4>Instructions</h4>
+     {{instructions}}
+     <p>
+     <ion-button fill="outline" (click)="AddFavourite()"><ion-icon name='fa-fa-heart'></ion-icon> Add to favourites </ion-button>
+    <!--call addfavourite each time to add a new one when the button is pressed-->>
+    </p>
+     </ion-card-content>
+     </ion-card>
+</ion-content>
